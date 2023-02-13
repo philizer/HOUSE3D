@@ -11,14 +11,14 @@ If any problem occurs, press the emergency switch immediately.
 Check the cables connections and switch on 
 
 ## II - Connexion to the router and to the rasp
-Connect to the wifi : “router”, pwd: “lesmaisons3Dcestcool”
+Connect to the wifi : “router”, pwd: “maisons3D”
 In the terminal of your laptop: “ifconfig”: to find your ip
 “nmap-sP 192.168.0.0/24”: see the different objects connected to the network, and find the ip of the rasp, the rasp’s IP may change.
 
 ## III - In the terminal windows/ubuntu - modify the printer's parameters
 Write the ip of the Rasp “ssh pi@192.168.0.___”, id: “pi”, pwd: “printer”, you are known in pi@octopi
 To get into the configuration file: “nano printer.cfg”
-[printer]: the parts of the file that can be modified, as the rotation distance, the microsteps (need to be the same values as the drivers ones), the position max (the axis does not move beyond this value), …
+[printer.cfg]: the parts of the file that can be modified, as the rotation distance, the microsteps (need to be the same values as the drivers ones), the position max (the axis does not move beyond this value), …
 If there have been any changes: crtl O - enter - ctrl X - enter
 
 ## IV - Debugs - in the terminal
@@ -32,7 +32,7 @@ If there have been any changes: crtl O - enter - ctrl X - enter
 
 OctoPrint:
 
-To access OctoPrint: enter the IP address of the rasp on your browser to go on the local network: “https://192.168.0.___”, id: “pi”, pwd: “printer0*i”
+To access OctoPrint: enter the IP address of the rasp on your browser to go on the local network: “https://192.168.0.___”, id: “pi”, pwd: “printer0*”
 Before each demand, it is necessary to go back to the origin, using the “house” button, or the command “G28”, in the terminal. To make only a special axis go to the origin use the command “G28X0” (for the x-axis) 
 If any modifications have been done in the configuration’s files, write “FIRMWARE_RESTART” in the Octoprint terminal to take them into account.
 If there is any error with the firmware, reconnect, and. then write “FIRMWARE_RESTART” in the terminal
@@ -46,4 +46,4 @@ Home Z axis, press switch manually before hitting the ground
 Launch Gcode (the printer will only home the X and Y axis when using the provided profile)
 
 ## VI - Shutdown the system
-When finish using all the system, write “shutdown-now” in the terminal (in pi@octop) before switching the power off, to avoid damaging the Raspberry Pii 
+When finish using all the system, write “shutdown-now” in the terminal (in pi@octop) before switching the power off, to avoid damaging the Raspberry Pi
