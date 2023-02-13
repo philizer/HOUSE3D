@@ -15,20 +15,20 @@ Connect to the wifi : “router”, pwd: “lesmaisons3Dcestcool”
 In the terminal of your laptop: “ifconfig”: to find your ip
 “nmap-sP 192.168.0.0/24”: see the different objects connected to the network, and find the ip of the rasp, the rasp’s IP may change.
 
-III - In the terminal windows/ubuntu - modify the printer's parameters
+## III - In the terminal windows/ubuntu - modify the printer's parameters
 Write the ip of the Rasp “ssh pi@192.168.0.___”, id: “pi”, pwd: “printer”, you are known in pi@octopi
 To get into the configuration file: “nano printer.cfg”
 [printer]: the parts of the file that can be modified, as the rotation distance, the microsteps (need to be the same values as the drivers ones), the position max (the axis does not move beyond this value), …
 If there have been any changes: crtl O - enter - ctrl X - enter
 
-IV - Debugs - in the terminal
+## IV - Debugs - in the terminal
 “sudo service klipper status”, to get the status of klipper
 “sudo service klipper stop”, to stop klipper
 “sudo service klipper start”, to start klipper
 “tail -f /tmp/klippy.log”, to get klipper log
 “tail -f /tmp/printer”, to view the output of the printer
 
-V - Launch a print (CAO, mesh, slicer, gcode, OctoPrint …)
+## V - Launch a print (CAO, mesh, slicer, gcode, OctoPrint …)
 
 OctoPrint:
 
@@ -45,5 +45,5 @@ Check the belt’s tension
 Home Z axis, press switch manually before hitting the ground
 Launch Gcode (the printer will only home the X and Y axis when using the provided profile)
 
-VI - Shutdown the system
+## VI - Shutdown the system
 When finish using all the system, write “shutdown-now” in the terminal (in pi@octop) before switching the power off, to avoid damaging the Raspberry Pii 
